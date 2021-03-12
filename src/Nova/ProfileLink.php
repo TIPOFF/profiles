@@ -12,7 +12,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Tipoff\Support\Nova\BaseResource;
 
-class Profile extends BaseResource
+class ProfileLink extends BaseResource
 {
     public static $model = \Tipoff\Profiles\Models\Profile::class;
 
