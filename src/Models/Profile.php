@@ -17,14 +17,6 @@ class Profile extends BaseModel
     use HasPackageFactory;
     use HasUpdater;
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::saving(function ($profile) {
-        });
-    }
-
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */

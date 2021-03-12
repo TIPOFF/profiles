@@ -16,14 +16,6 @@ class ProfileLink extends BaseModel
     use HasPackageFactory;
     use HasUpdater;
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::saving(function ($profile_link) {
-        });
-    }
-
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
