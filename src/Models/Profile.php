@@ -21,7 +21,7 @@ class Profile extends BaseModel
     {
         parent::boot();
 
-        static::saving(function ($profile) {
+        static::saving(function ($profile_link) {
 
         });
     }
@@ -42,11 +42,4 @@ class Profile extends BaseModel
         return $this->belongsTo(Webpage::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function domains()
-    {
-        return $this->belongsTo(Domain::class);
-    }
 }
