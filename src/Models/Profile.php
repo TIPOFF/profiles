@@ -22,7 +22,6 @@ class Profile extends BaseModel
         parent::boot();
 
         static::saving(function ($profile) {
-
         });
     }
 
