@@ -20,7 +20,7 @@ class ProfileLink extends BaseModel
     {
         parent::boot();
 
-        static::saving(function ($profile) {
+        static::saving(function ($profile_link) {
         });
     }
 
