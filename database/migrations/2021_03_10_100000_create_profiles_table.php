@@ -15,8 +15,6 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->morphs('profileable');      //  User, Location, Company
             $table->string('bio');
-            $table->unsignedTinyInteger('priority')->default(100);
-
             $table->foreignIdFor(ProfileLink::class);
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
