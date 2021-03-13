@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Schema;
 use Tipoff\Seo\Models\Webpage;
 use Tipoff\Profiles\Models\Profile;
 
-class CreateProfileInksTable extends Migration
+class CreateProfileLinksTable extends Migration
 {
     public function up()
     {
