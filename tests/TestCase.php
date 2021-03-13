@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Profiles\Tests;
 
-use DrewRoberts\Media\MediaServiceProvider;
 use Laravel\Nova\NovaCoreServiceProvider;
 use Spatie\Permission\PermissionServiceProvider;
 use Tipoff\Authorization\AuthorizationServiceProvider;
