@@ -14,7 +14,6 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->morphs('profileable');      //  User, Location, Company
-            $table->string('type');         // eg. Website, Facebook, Twitter, Instagram
             $table->string('bio');
             $table->unsignedTinyInteger('priority')->default(100);
 

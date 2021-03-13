@@ -22,7 +22,7 @@ class CreateProfileLinksTable extends Migration
             $table->foreignIdFor(app('user'), 'updater_id');
             $table->timestamps();
 
-            $table->unique(['profileable_id','profileable_type','type',]);
+            $table->unique('type');
         });
     }
 }

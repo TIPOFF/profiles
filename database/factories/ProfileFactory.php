@@ -19,8 +19,8 @@ class ProfileFactory extends Factory
         return [
             'bio' => $this->faker->text(200),
             'profileable_id' => $user->id,
-            'type' => $this->faker->randomElement(['Facebook','Twitter','Google']),
             'profileable_type' => get_class($user),
+            'priority' => $this->faker->numberBetween(1,100),
             'creator_id' => randomOrCreate(app('user')),
             'updater_id' => randomOrCreate(app('user')),
         ];
