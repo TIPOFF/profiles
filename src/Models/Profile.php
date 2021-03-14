@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Profiles\Models;
 
-use Tipoff\Seo\Models\Domain;
-use Tipoff\Seo\Models\Webpage;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Traits\HasCreator;
 use Tipoff\Support\Traits\HasPackageFactory;
