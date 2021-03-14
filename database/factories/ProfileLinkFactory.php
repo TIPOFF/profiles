@@ -6,6 +6,7 @@ namespace Tipoff\Profiles\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Tipoff\Profiles\Models\ProfileLink;
+use Tipoff\Profiles\Nova\Profile;
 use Tipoff\Seo\Models\Webpage;
 
 class ProfileLinkFactory extends Factory
@@ -16,8 +17,9 @@ class ProfileLinkFactory extends Factory
     {
 
         return [
-            'type' => $this->faker->randomElement(['Facebook','Twitter','Instagram']),
+            'type' => $this->faker->randomElement(['Facebook','Google','Instagram']),
             'link' => Webpage::factory(),
+            'profile_id' => Profile::factory(),
             'priority' => $this->faker->numberBetween(1,100),
             'creator_id' => randomOrCreate(app('user')),
             'updater_id' => randomOrCreate(app('user')),

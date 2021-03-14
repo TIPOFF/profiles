@@ -21,7 +21,6 @@ class ProfileFactory extends Factory
             'bio' => $this->faker->text(200),
             'profileable_id' => $user->id,
             'profileable_type' => get_class($user),
-            'profile_link_id' => ProfileLink::factory(),
             'creator_id' => randomOrCreate(app('user')),
             'updater_id' => randomOrCreate(app('user')),
         ];

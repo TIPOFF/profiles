@@ -25,10 +25,10 @@ class ProfileLink extends BaseModel
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function webpages()
+    public function links()
     {
-        return $this->belongsTo(Webpage::class);
+        return $this->hasMany(Webpage::class);
     }
 }

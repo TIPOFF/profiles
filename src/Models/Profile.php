@@ -26,18 +26,10 @@ class Profile extends BaseModel
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function webpages()
+    public function profile_links()
     {
-        return $this->belongsTo(Webpage::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function domains()
-    {
-        return $this->belongsTo(Domain::class);
+        return $this->hasMany(ProfileLink::class);
     }
 }
