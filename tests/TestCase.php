@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Tipoff\Profiles\Tests;
 
 use Laravel\Nova\NovaCoreServiceProvider;
-use Tipoff\Locations\LocationsServiceProvider;
+use Spatie\Permission\PermissionServiceProvider;
+use Tipoff\Authorization\AuthorizationServiceProvider;
 use Tipoff\Profiles\ProfilesServiceProvider;
 use Tipoff\Profiles\Tests\Support\Providers\NovaTestbenchServiceProvider;
+use Tipoff\Seo\SeoServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
 
@@ -20,7 +22,9 @@ class TestCase extends BaseTestCase
             NovaTestbenchServiceProvider::class,
             ProfilesServiceProvider::class,
             SupportServiceProvider::class,
-            LocationsServiceProvider::class,
+            AuthorizationServiceProvider::class,
+            PermissionServiceProvider::class,
+            SeoServiceProvider::class,
         ];
     }
 }
