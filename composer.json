@@ -27,10 +27,7 @@
             "Tipoff\\Profiles\\": "src",
             "Tipoff\\Profiles\\Database\\Factories\\": "database/factories",
             "Tipoff\\Profiles\\Database\\Seeders\\": "database/seeders"
-        },
-        "files": [
-            "src/Helpers/SerpApiSearch.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
