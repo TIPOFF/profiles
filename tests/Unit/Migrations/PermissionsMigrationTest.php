@@ -28,6 +28,6 @@ class PermissionsMigrationTest extends TestCase
             'delete profile links',
         ])->pluck('name');
 
-        $this->assertCount(3, $seededPermissions);
+        $this->assertCount(7, $seededPermissions);
     }
 }
