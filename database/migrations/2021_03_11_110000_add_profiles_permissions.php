@@ -15,6 +15,7 @@ class AddProfilesPermissions extends BasePermissionsMigration
             'view profile links' => ['Owner', 'Staff'],
             'create profile links' => ['Owner'],
             'update profile links' => ['Owner'],
+            'delete profile links' => ['Owner'],
         ];
 
         $this->createPermissions($permissions);
