@@ -14,16 +14,16 @@ class CreateProfileLinksTable extends Migration
     {
         Schema::create('profile_links', function (Blueprint $table) {
             $table->id();
-            $table->string('type');         // eg. Website, Facebook, Twitter, Instagram
+            $table->string('type')->index();         // eg. Website, Facebook, Twitter, Instagram
+            $table->foreignIdFor(Profile::class)->index();
+            $table->foreignIdFor(Webpage::class);
             $table->unsignedTinyInteger('priority')->default(100);
-            $table->foreignIdFor(Webpage::class, 'link')->index();
-            $table->foreignIdFor(Profile::class);
 
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
             $table->timestamps();
 
-            $table->unique('type');
+            $table->unique(['type', 'profile_id']);
         });
     }
 }
