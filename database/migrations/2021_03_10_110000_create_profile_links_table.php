@@ -18,8 +18,6 @@ class CreateProfileLinksTable extends Migration
             $table->foreignIdFor(Profile::class)->index();
             $table->foreignIdFor(Webpage::class);
             $table->unsignedTinyInteger('priority')->default(100);
-            $table->foreignIdFor(Webpage::class)->index();
-            $table->foreignIdFor(Profile::class);
 
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
