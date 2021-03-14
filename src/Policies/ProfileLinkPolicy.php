@@ -34,7 +34,7 @@ class ProfileLinkPolicy
 
     public function delete(UserInterface $user, ProfileLink $profile_link): bool
     {
-        return false;
+        return $user->hasPermissionTo('delete profile_links');
     }
 
     public function restore(UserInterface $user, ProfileLink $profile_link): bool
