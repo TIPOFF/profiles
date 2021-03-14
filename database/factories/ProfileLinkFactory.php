@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tipoff\Profiles\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Tipoff\Profiles\Models\Profile;
 use Tipoff\Profiles\Models\ProfileLink;
-use Tipoff\Profiles\Nova\Profile;
 use Tipoff\Seo\Models\Webpage;
 
 class ProfileLinkFactory extends Factory
