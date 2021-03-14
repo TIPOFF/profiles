@@ -16,19 +16,13 @@ class ProfileLink extends BaseModel
     use HasPackageFactory;
     use HasUpdater;
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function profile()
     {
         return $this->belongsTo(Profile::class);
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function link()
+    
+    public function webpage()
     {
-        return $this->belongsTo(Webpage::class, 'link');
+        return $this->belongsTo(Webpage::class);
     }
 }
