@@ -18,8 +18,8 @@ class ProfileLinkFactory extends Factory
 
         return [
             'type' => $this->faker->randomElement(['Facebook','Google','Instagram']),
-            'link' => Webpage::factory(),
-            'profile_id' => Profile::factory(),
+            'webpage_id' => Webpage::factory()->create()->id,
+            'profile_id' => Profile::factory()->create()->id,
             'priority' => $this->faker->numberBetween(1,100),
             'creator_id' => randomOrCreate(app('user')),
             'updater_id' => randomOrCreate(app('user')),

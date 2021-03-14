@@ -16,7 +16,7 @@ class CreateProfileLinksTable extends Migration
             $table->id();
             $table->string('type');         // eg. Website, Facebook, Twitter, Instagram
             $table->unsignedTinyInteger('priority')->default(100);
-            $table->foreignIdFor(Webpage::class, 'link')->index();
+            $table->foreignIdFor(Webpage::class)->index();
             $table->foreignIdFor(Profile::class);
 
             $table->foreignIdFor(app('user'), 'creator_id');
