@@ -23,6 +23,7 @@ class CreateProfileLinksTable extends Migration
 
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
+            $table->softDeletes();
             $table->timestamps();
 
             $table->unique(['type', 'profile_id']);
