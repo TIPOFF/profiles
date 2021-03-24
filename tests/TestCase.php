@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Tipoff\Profiles\Tests;
 
+use DrewRoberts\Media\MediaServiceProvider;
 use Laravel\Nova\NovaCoreServiceProvider;
 use Spatie\Permission\PermissionServiceProvider;
+use Tipoff\Addresses\AddressesServiceProvider;
 use Tipoff\Authorization\AuthorizationServiceProvider;
 use Tipoff\Profiles\ProfilesServiceProvider;
 use Tipoff\Seo\SeoServiceProvider;
@@ -20,11 +22,13 @@ class TestCase extends BaseTestCase
         return [
             NovaCoreServiceProvider::class,
             NovaPackageServiceProvider::class,
-            ProfilesServiceProvider::class,
             SupportServiceProvider::class,
-            AuthorizationServiceProvider::class,
             PermissionServiceProvider::class,
+            AuthorizationServiceProvider::class,
+            AddressesServiceProvider::class,
+            MediaServiceProvider::class,
             SeoServiceProvider::class,
+            ProfilesServiceProvider::class,
         ];
     }
 }
