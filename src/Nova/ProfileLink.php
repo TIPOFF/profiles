@@ -35,7 +35,6 @@ class ProfileLink extends BaseResource
 
     public function fields(Request $request)
     {
-
         return array_filter([
             Text::make('Type')->help('eg. Website, Facebook, Twitter, Instagram')
                 ->rules('required')
@@ -47,7 +46,7 @@ class ProfileLink extends BaseResource
                     ->creationRules("unique:profile_links,profile_id,NULL,id,type,$request->type")
                     ->updateRules("unique:profile_links,profile_id,{{resourceId}},id,type,$request->type")
              : null,
-            nova('webpage') ? BelongsTo::make('Webpage', 'webpage', nova('webpage')) : null
+            nova('webpage') ? BelongsTo::make('Webpage', 'webpage', nova('webpage')) : null,
         ]);
     }
 
