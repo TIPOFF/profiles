@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tipoff\Profiles\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Tipoff\Seo\Models\Webpage;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Traits\HasCreator;
 use Tipoff\Support\Traits\HasPackageFactory;
@@ -20,11 +19,11 @@ class ProfileLink extends BaseModel
 
     public function profile()
     {
-        return $this->belongsTo(Profile::class);
+        return $this->belongsTo(app('profile'));
     }
-    
+
     public function webpage()
     {
-        return $this->belongsTo(Webpage::class);
+        return $this->belongsTo(app('webpage'));
     }
 }

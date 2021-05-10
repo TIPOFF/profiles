@@ -14,27 +14,27 @@ class ProfileLinkPolicy
 
     public function viewAny(UserInterface $user): bool
     {
-        return $user->hasPermissionTo('view profile_links');
+        return $user->hasPermissionTo('view profile links');
     }
 
     public function view(UserInterface $user, ProfileLink $profile_link): bool
     {
-        return $user->hasPermissionTo('view profile_links');
+        return $user->hasPermissionTo('view profile links');
     }
 
     public function create(UserInterface $user): bool
     {
-        return $user->hasPermissionTo('create profile_links');
+        return $user->hasPermissionTo('create profile links');
     }
 
     public function update(UserInterface $user, ProfileLink $profile_link): bool
     {
-        return $user->hasPermissionTo('update profile_links');
+        return $user->hasPermissionTo('update profile links');
     }
 
     public function delete(UserInterface $user, ProfileLink $profile_link): bool
     {
-        return $user->hasPermissionTo('delete profile_links');
+        return $user->hasPermissionTo('delete profile links');
     }
 
     public function restore(UserInterface $user, ProfileLink $profile_link): bool
