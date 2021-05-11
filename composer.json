@@ -16,12 +16,12 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "tipoff/authorization": "^2.7.1",
-        "tipoff/seo": "^2.4.0",
-        "tipoff/support": "^1.8.8"
+        "tipoff/authorization": "^2.8.6",
+        "tipoff/seo": "^2.7.6",
+        "tipoff/support": "^2.1.6"
     },
     "require-dev": {
-        "tipoff/test-support": "^1.4.1"
+        "tipoff/test-support": "^2.0.1"
     },
     "autoload": {
         "psr-4": {

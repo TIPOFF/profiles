@@ -28,6 +28,6 @@ class Profile extends BaseModel
      */
     public function profile_links()
     {
-        return $this->hasMany(ProfileLink::class);
+        return $this->hasMany(app('profile_link'));
     }
 }
